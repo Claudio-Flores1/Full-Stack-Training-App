@@ -2,7 +2,7 @@ const mongoose = require('./connection')
 
 const { Schema } = mongoose
 
-const commentSchema = new Schema({
+const commentSchema = new Schema({ //Schema names should be capitalized
     note: {
         type: String,
         required: true

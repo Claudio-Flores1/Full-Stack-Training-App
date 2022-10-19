@@ -1,6 +1,6 @@
 require("dotenv").config()
 const express = require("express")
-const path = require("path") 
+const path = require("path")  //comment out or delete any imports or code you don't use
 const ProductRouter = require('./controllers/productController')
 const UserRouter = require('./controllers/userController')
 const CommentRouter = require('./controllers/commentController')
