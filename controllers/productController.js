@@ -30,6 +30,7 @@ router.get("/", (req, res) => {
 router.post("/", (req, res) => {
     req.body.updated = req.body.updated === 'on' ? true : false
     req.body.waterProof = req.body.waterProof === 'on' ? true : false
+    //On your final app you're going to want to comment out or delete your console logs
     console.log("req.body initially", req.body)
     console.log('req.body after changing checkbox value', req.body)
     Product.create(req.body)
@@ -88,6 +89,7 @@ router.post("/", (req, res) => {
     console.log('req.body after changing checkbox value', req.body)
     Product.create(req.body)
     .then(data => {
+        //As of right now this redirects to a page that shows the json of the new product, which I'm sure you know. Something to get working!
         res.json(data)
     })
 })
@@ -132,6 +134,7 @@ router.put("/:id", (req, res) => {
 
 // DELETE REQUEST
 // DELETE route -> deletes a route
+//You currently can't use delete on your products, so try to get this working as well!
 router.delete('/:id', (req, res) => {
     const productId = req.params.id
 

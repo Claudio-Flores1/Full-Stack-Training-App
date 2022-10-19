@@ -1,3 +1,4 @@
+// You're going to want to get used to writing descriptive comments in your code for other developers and your future self.
 const express = require("express")
 const Product = require("../models/product")
 
@@ -38,6 +39,7 @@ router.delete('/delete/:productId/:commId', (req, res) => {
                     theComment.remove()
                     product.save()
                     res.redirect(`/products/${product.id}`)
+                    //You can make this a little more dry
                 } else {
                     const err = 'you%20are%20not%20authorized%20for%20this%20action'
                     res.redirect(`/error?error=${err}`)

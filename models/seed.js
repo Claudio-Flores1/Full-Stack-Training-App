@@ -18,7 +18,7 @@ db.on('open', () => {
         { name: "Mantis 26 Backpack", color: "Relic & Habitat", waterProof: false, family: "Everyday", updated: true,  info: "Comfortable, streamlined, highly versatile 26L pack made with recycled materials."},
 
     ]
-
+//You should have an update route in here.
     Product.deleteMany({})
         .then(deletedProducts => {
             console.log('this is what .deleteMany returns', deletedProducts)

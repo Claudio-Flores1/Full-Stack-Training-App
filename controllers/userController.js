@@ -50,6 +50,7 @@ router.post('/login', async (req, res) => {
                 const result = await bcrypt.compare(password, user.password)
 
                 if (result) {
+                    //Becareful of whitespace in your code!
 
                     req.session.username = username
                     req.session.loggedIn = true
